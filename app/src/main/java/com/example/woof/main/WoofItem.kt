@@ -21,6 +21,24 @@ sealed class WoofItem {
             }
         }
 
+        override fun equals(other: Any?): Boolean {
+            if (this === other) return true
+            if (javaClass != other?.javaClass) return false
+
+            other as Loaded
+
+            if (fileSize != other.fileSize) return false
+            if (url != other.url) return false
+
+            return true
+        }
+
+        override fun hashCode(): Int {
+            var result = fileSize
+            result = 31 * result + url.hashCode()
+            return result
+        }
+
         enum class Type {
             UNKNOWN,
             IMAGE,
@@ -28,5 +46,6 @@ sealed class WoofItem {
             VIDEO
         }
     }
+
     class Error(val errorMsg: String): WoofItem()
 }

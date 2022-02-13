@@ -18,14 +18,14 @@ class WoofListAdapter(private val action: WoofItem.() -> Unit): ListAdapter<Woof
             oldItem: WoofItem,
             newItem: WoofItem
         ) : Boolean {
-            return false
+            return oldItem === newItem
         }
 
         override fun areContentsTheSame(
             oldItem: WoofItem,
             newItem: WoofItem
         ) : Boolean {
-            return false
+            return oldItem == newItem
         }
     }
 
