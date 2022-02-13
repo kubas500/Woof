@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Woof</string>
+    <string name="show_random_dogs">Show me randoms dogs</string>
+    <string name="size_file">%s MB</string>
+    <string name="unsupported_file">Unknown file</string>
+    <string name="close_app_information">Do you want to close app?</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+</resources>
